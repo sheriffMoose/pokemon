@@ -1,0 +1,63 @@
+<app-card [showAsModal]="showAsModal" [showBack]="showBack()" [showSave]="true">
+  <div class="form-group" [formGroup]="form">
+    <app-input [form]="form" [label]="'editor.name'" name="name" />
+    <app-input
+      [form]="form"
+      [label]="'editor.height'"
+      name="height"
+      type="number"
+    />
+    <app-input
+      [form]="form"
+      [label]="'editor.weight'"
+      name="weight"
+      type="number"
+    />
+    <app-input
+      [form]="form"
+      [label]="'editor.xp'"
+      name="base_experience"
+      type="number"
+    />
+    @if(true) {
+    <div class="form-array">
+      <div class="row">
+        <h3>{{ "editor.abilities" }}</h3>
+        <button
+          class="green"
+          (click)="addItem(details.abilities, { ability: { name: '' } })"
+        >
+          ➕
+        </button>
+      </div>
+      @for(ability of details.abilities; track $index) {
+      <div class="row">
+        {{ ability.ability.name }}
+        <button class="red" (click)="removeItem(details.abilities, ability)">
+          🗑️
+        </button>
+      </div>
+      }
+    </div>
+    <div class="form-array">
+      <div class="row">
+        <h3>{{ "editor.types" }}</h3>
+        <button
+          class="green"
+          (click)="addItem(details.types, { type: { name: '' } })"
+        >
+          ➕
+        </button>
+      </div>
+      @for(type of details.types; track $index) {
+      <div class="row">
+        {{ type.type.name }}
+        <button class="red" (click)="removeItem(details.types, type)">
+          🗑️
+        </button>
+      </div>
+      }
+    </div>
+    }
+  </div>
+</app-card>

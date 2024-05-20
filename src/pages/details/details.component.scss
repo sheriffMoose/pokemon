@@ -1,0 +1,24 @@
+:host {
+  text-align: center;
+}
+
+p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  margin: auto;
+}
+
+.pill {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+ul {
+  display: flex;
+  width: 75%;
+  list-style-type: none;
+}

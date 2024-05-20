@@ -1,0 +1,16 @@
+<div class="list-items">
+  @for (item of list.results; track $index) {
+  <div class="list-item" (click)="onSelect(item)">
+    <span>{{ item.name }}</span>
+    <button routerLink="/details/{{ item.name }}">🔗</button>
+  </div>
+  }
+</div>
+@if(selected) {
+  <app-details [details]="selected" [showAsModal]="showAsModal" />
+}
+<app-paginator
+  [pageNo]="pageNo"
+  [pageCount]="getPageCount()"
+  (onPaginate)="onPaginate($event)"
+/>

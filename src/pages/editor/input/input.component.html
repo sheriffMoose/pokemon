@@ -1,0 +1,10 @@
+<div class="form-input">
+  <label [htmlFor]="name">{{ label }}</label>
+  <input
+    [formControl]="control"
+    [id]="name"
+    [name]="name"
+    [type]="type || 'text'"
+  />
+  <div class="form-error">{{ getError() }}</div>
+</div>

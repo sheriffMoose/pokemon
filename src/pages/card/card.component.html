@@ -1,0 +1,15 @@
+@if(showAsModal){
+<span class="close" (click)="onClose()">❌</span>
+}
+
+<ng-content />
+
+<div class="card-footer">
+  @if(showSave) {
+  <button (click)="onSave()">{{ "shared.save" }}</button>
+  }
+
+  @if(showBack) {
+  <button (click)="onBack()">{{ "shared.back" }}</button>
+  }
+</div>

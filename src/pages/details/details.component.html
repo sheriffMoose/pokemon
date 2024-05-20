@@ -1,0 +1,32 @@
+<app-card [showAsModal]="showAsModal" [showBack]="showBack()">
+  <h2>{{ details.name | uppercase }}</h2>
+  <img [src]="details.sprites.front_default" alt="{{ details.name }} image" />
+  <p>
+    <span>{{ "details.height" }}</span>
+    <span class="pill">{{ details.height }}</span>
+  </p>
+  <p>
+    <span>{{ "details.weight" }}</span>
+    <span class="pill">{{ details.weight }}</span>
+  </p>
+  <p>
+    <span>{{ "details.xp" }}</span
+    ><span class="pill">{{ details.base_experience || 0 }}</span>
+  </p>
+  <h3>{{ "details.abilities" }}</h3>
+  <ul>
+    @for(ability of details.abilities; track ability.slot) {
+    <li class="pill">
+      {{ ability.ability.name }}
+    </li>
+    }
+  </ul>
+  <h3>{{ "details.types" }}</h3>
+  <ul>
+    @for(type of details.types; track type.slot) {
+    <li class="pill">
+      {{ type.type.name }}
+    </li>
+    }
+  </ul>
+</app-card>

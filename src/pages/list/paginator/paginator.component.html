@@ -1,0 +1,8 @@
+<button (click)="paginate(0, 1)" [disabled]="isFirstPage()"><<</button>
+<button (click)="paginate(-1)" [disabled]="isFirstPage()"><</button>
+<div class="pageInfo">
+  <span class="pageNo">{{ pageNo }}</span> /
+  <span class="pageCount">{{ pageCount }}</span>
+</div>
+<button (click)="paginate(1)" [disabled]="isLastPage()">></button>
+<button (click)="paginate(0, pageCount)" [disabled]="isLastPage()">>></button>

@@ -1,0 +1,20 @@
+{
+  "shared": {
+    "back": "Back",
+    "save": "Save"
+  },
+  "details": {
+    "height": "Height:",
+    "weight": "Weight:",
+    "xp": "Base XP:",
+    "abilities": "Abilities:",
+    "types": "Types:"
+  },
+  "editor": {
+    "height": "Height",
+    "weight": "Weight",
+    "xp": "Base XP",
+    "abilities": "Abilities",
+    "types": "Types"
+  }
+}
