@@ -21,9 +21,9 @@ export class EditorComponent implements OnInit {
 
   form = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3), Validators.pattern('^[a-zA-Z]+$')]),
-    height: new FormControl(0, [crossFieldValidator]),
-    weight: new FormControl(0, [crossFieldValidator]),
-    base_experience: new FormControl(0, [crossFieldValidator]),
+    height: new FormControl(null, [crossFieldValidator]),
+    weight: new FormControl(null, [crossFieldValidator]),
+    base_experience: new FormControl(null, [crossFieldValidator]),
   });
 
   ngOnInit() { }
@@ -46,5 +46,10 @@ export class EditorComponent implements OnInit {
 
 
 const crossFieldValidator: ValidatorFn = (control: AbstractControl) => {
+  if (!control.value) {
+    return { required: true };
+  } else if (control.value <= 0) {
+    return { min: true };
+  }
   return null;
 };

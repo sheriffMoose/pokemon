@@ -11,9 +11,22 @@
     "types": "Types:"
   },
   "editor": {
+    "name": "Name",
+    "name.required": "Name is required",
+    "name.minLength": "Name must be at least 3 characters long",
+    "name.pattern": "Name must contain only letters",
     "height": "Height",
+    "height.required": "Height is required",
+    "height.min": "Height cannot be less than or equal to 0",
+    "height.crossField": "Name is required",
     "weight": "Weight",
+    "weight.required": "Weight is required",
+    "weight.min": "Weight cannot be less than or equal to 0",
+    "weight.crossField": "Name is required",
     "xp": "Base XP",
+    "xp.required": "Base XP is required",
+    "xp.min": "Base XP cannot be less than or equal to 0",
+    "xp.crossField": "Name is required",
     "abilities": "Abilities",
     "types": "Types"
   }

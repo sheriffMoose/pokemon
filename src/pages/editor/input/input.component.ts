@@ -21,7 +21,7 @@ export class InputComponent implements OnInit {
   }
 
   getError() {
-    if (this.control?.invalid && !this.control.pristine) {
+    if (this.control?.invalid && (!this.control.pristine || this.control.touched)) {
       const errorKey = Object.keys({ ...this.control.errors })[0];
       return `${this.name}.${errorKey}`;
     }

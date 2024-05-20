@@ -2,7 +2,8 @@
   @for (item of list.results; track $index) {
   <div class="list-item" (click)="onSelect(item)">
     <span>{{ item.name }}</span>
-    <button routerLink="/details/{{ item.name }}">🔗</button>
+    <button routerLink="/editor/{{ item.name }}">✏️</button>
+    <button routerLink="/details/{{ item.name }}">📃</button>
   </div>
   }
 </div>
