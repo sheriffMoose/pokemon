@@ -50,5 +50,5 @@ Run `yarn start` for a dev server. Navigate to `http://localhost:4200/`. The app
    5. Update the `crossFieldValidator` function to validate the fields only if the `name` field is valid.
    6. Display the abilities & types as inputs instead of regular text and make sure the add & delete buttons work properly.
 10. Configure the application routing so that:
-   1. In `details` & `list` routes, if HTTP requests fail, it should redirect the UI to the `/error` page.
-   2. Add a new `list` route that can take a `pageNo` & `name` and loads the list along with the selected name.
+    1.  In `details` & `list` routes, if HTTP requests fail, it should redirect the UI to the `/error` page.
+    2.  Add a new `list` route that can take a `pageNo` & `name` and loads the list along with the selected name.
