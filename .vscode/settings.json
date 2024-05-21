@@ -4,5 +4,9 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "vsicons.presets.angular": true
+  "win-ca.inject": "append",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "modifications",
+  "vsicons.presets.angular": true,
+  "workbench.iconTheme": "vscode-icons"
 }

@@ -4,6 +4,11 @@ import { ListGuard } from './list.guard';
 
 export default [
   {
+    path: '',
+    redirectTo: 'list',
+    pathMatch: 'full'
+  },
+  {
     path: 'list',
     component: ListComponent,
     resolve: { list: ListGuard }
