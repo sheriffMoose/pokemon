@@ -4,6 +4,7 @@
     "loiane.angular-extension-pack",
     "github.copilot",
     "vscode-icons-team.vscode-icons",
-    "ukoloff.win-ca"
+    "ukoloff.win-ca",
+    "eamodio.gitlens"
   ]
 }
